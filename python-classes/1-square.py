@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
-It's a script do define a square class
-with :  Private instance attribute: size
+1-square.py
+This module create a square
+Return: Void
 """
 
 
