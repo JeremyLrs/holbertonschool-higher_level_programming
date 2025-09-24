@@ -9,4 +9,6 @@ Return: subclass
 
 class MyList(list):
     def print_sorted(self):
-        print(sorted(self))
+        sorted = self.copy()
+        sorted.sort()
+        print(sorted)
