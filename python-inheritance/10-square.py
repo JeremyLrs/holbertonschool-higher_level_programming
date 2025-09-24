@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
 """
-10-rectangle.py
-Write a class Square that inherits
-from Rectangle with instantiation
-with size: def __init__(self, size)
+10-square.py
+Define Square that inherits from Rectangle
+Return: Void
 """
 
 Rectangle = __import__("9-rectangle").Rectangle
@@ -17,8 +16,9 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """
-       __init__ - Init function with
-        Width and Height value
+        __init__ - Init function
+        @size: Size of the square
+        Return: Void
         """
         self.integer_validator("size", size)
         self.__size = size
@@ -32,7 +32,7 @@ class Square(Rectangle):
 
     def area(self):
         """
-        area - Calculate the
-        area of the square
+        area - Calculate the area of the square
+        Return: int - the area of the square
         """
         return (self.__size * self.__size)
