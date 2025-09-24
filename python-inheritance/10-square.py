@@ -25,14 +25,14 @@ class Square(Rectangle):
 
     def __str__(self):
         """
-        __str__ - Human 
-        output
+        __str__ - Human readable output
+        Return: String
         """
         return "[Rectangle] {}/{}".format(self.__size, self.__size)
 
     def area(self):
         """
-        area - Calculate the 
+        area - Calculate the
         area of the square
         """
         return (self.__size * self.__size)
