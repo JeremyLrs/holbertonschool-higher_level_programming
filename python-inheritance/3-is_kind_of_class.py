@@ -12,6 +12,12 @@ Return: True if it is otherwise False
 
 
 def is_kind_of_class(obj, a_class):
+    """
+    is_kind_of_class - Compare obj and class
+    @obj: An object
+    @a_class: A class
+    Return: True if obj == a_class, else False
+    """
     if isinstance(obj, a_class):
         return True
     else:
