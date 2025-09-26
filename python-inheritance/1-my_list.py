@@ -2,8 +2,8 @@
 
 """
 1-my_list.py
-Write a class MyList that inherits from list
-Return: subclass
+Set inherance
+Return a subclass
 """
 
 
