@@ -2,8 +2,8 @@
 
 '''
 3-to_json_string.py
-Function that returns the JSON 
-representation of an object 
+Function that returns the JSON
+representation of an object
 '''
 import json
 
