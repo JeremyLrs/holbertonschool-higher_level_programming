@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-0-read_file.py
+1-write_file.py
 Function to writes a string to a text file.
 '''
 
