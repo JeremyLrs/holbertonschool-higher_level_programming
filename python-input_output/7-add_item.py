@@ -15,7 +15,7 @@ def main():
     Adds all command-line arguments to a list saved as a file.
     """
     if len(sys.argv) < 2:
-        sys.exit()
+        my_list = []
 
     filename = "add_item.json"
     try:
