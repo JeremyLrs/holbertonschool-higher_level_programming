@@ -2,7 +2,7 @@
 
 '''
 5-save_to_json_file.py
-function that writes an Object 
+function that writes an Object
 to a text file, using a JSON representation
 '''
 import json
