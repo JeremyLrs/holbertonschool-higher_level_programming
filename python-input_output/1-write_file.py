@@ -8,7 +8,7 @@ Function to writes a string to a text file.
 
 def write_file(filename="", text=""):
     '''
-    Function to write a string and 
+    Function to write a string and
     return the number of char written
     '''
 
