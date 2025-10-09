@@ -15,11 +15,13 @@ def fetch_and_print_posts():
     Return: Void
     '''
     req = requests.get('https://jsonplaceholder.typicode.com/posts')
-    print(req.status_code)
+    print("Status Code:", req.status_code)
     if req.status_code == 200:
         data = req.json()
         for i in data:
             print(i['title'])
+    else:
+        print("Failed to fetch posts")
 
 
 def fetch_and_save_posts():
