@@ -21,27 +21,27 @@ def fetch_and_print_posts():
         for i in data:
             print(i['title'])
     else:
-        print("Failed to fetch posts")
+        print("Failed to fetch data")
 
 
 def fetch_and_save_posts():
-    '''
-    fetch_and_save_posts - Fetch and print posts
-    Return: Void
-    '''
-    req = requests.get('https://jsonplaceholder.typicode.com/posts')
-    print(req.status_code)
-    if req.status_code == 200:
-        data = req.json()
-        result = []
-    for i in range(len(data)):
-        result.append({
-            "id": data[i]["id"],
-            "title": data[i]["title"],
-            "body": data[i]["body"]
-            })
-    with open("post.csv", 'w', newline='', encoding="utf-8") as file:
-        names = ["id", "title", "body"]
-        reader = csv.DictWriter(file, fieldnames=names)
-        reader.writeheader()
-        reader.writerows(result)
+    url = "https://jsonplaceholder.typicode.com/posts"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        posts = response.json()
+
+        posts_data = [
+            {"id": post["id"], "title": post["title"], "body": post["body"]}
+            for post in posts
+        ]
+
+        with open("posts.csv", "w", newline="", encoding="utf-8") as csvfile:
+            fieldnames = ["id", "title", "body"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(posts_data)
+
+        print("Posts saved to posts.csv")
+    else:
+        print("Failed to fetch posts")
