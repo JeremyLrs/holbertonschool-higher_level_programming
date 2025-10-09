@@ -3,6 +3,7 @@
 
 '''
 task_03_http_server.py
+task_03_http_server.py
 '''
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -10,7 +11,14 @@ import json
 
 
 class RequestHandler(BaseHTTPRequestHandler):
+    """
+    ServerHandler - Server Handler class
+    """
     def do_GET(self):
+        """
+        do_GET - Get function
+        Return: Void
+        """
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
@@ -50,6 +58,10 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 
 def main():
+    """
+    main - Main function
+    Return: Void
+    """
     with HTTPServer(("", 8000), RequestHandler) as httpd:
         httpd.serve_forever()
 
