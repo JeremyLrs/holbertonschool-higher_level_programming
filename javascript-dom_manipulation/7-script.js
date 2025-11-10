@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const url = 'https://swapi-api.hbtn.io/api/films/?format=json';
 const movies = document.querySelector('ul#list_movies');
 
